@@ -247,7 +247,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
+.hidden {
+  display: none;
+}
 .mobile-nav-toggle {
   display: none;
 }
@@ -257,16 +259,12 @@ body {
     display: none;
   }
   .mobile-nav-toggle {
-    display: block;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 0.5em;
   }
   .mobile-nav-toggle .icon-close {
-    display: none;
-  }
-  .hidden {
     display: none;
   }
 }

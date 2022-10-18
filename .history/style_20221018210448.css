@@ -237,40 +237,14 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.primary-header {
-  margin-top: var(--size-700);
-}
-.nav-wrapper {
-  display: flex;
-  background-color: aqua;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .mobile-nav-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.mobile-nav-toggle .icon-close {
   display: none;
 }
-/*for mobile*/
-@media (max-width: 50em) {
-  .primary-navigation {
-    display: none;
-  }
-  .mobile-nav-toggle {
-    display: block;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
-  }
-  .mobile-nav-toggle .icon-close {
-    display: none;
-  }
-  .hidden {
-    display: none;
-  }
-}
-
 /*for desktop screen size*/
 @media (min-width: 50em) {
   .even-columns {

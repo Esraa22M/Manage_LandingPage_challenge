@@ -237,7 +237,15 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+.mobile-nav-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+}
+.mobile-nav-toggle .icon-close {
+  display: none;
+}
 .primary-header {
   margin-top: var(--size-700);
 }
@@ -247,26 +255,15 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
+.hidden {
+  display: none;
+}
 .mobile-nav-toggle {
   display: none;
 }
 /*for mobile*/
 @media (max-width: 50em) {
   .primary-navigation {
-    display: none;
-  }
-  .mobile-nav-toggle {
-    display: block;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
-  }
-  .mobile-nav-toggle .icon-close {
-    display: none;
-  }
-  .hidden {
     display: none;
   }
 }

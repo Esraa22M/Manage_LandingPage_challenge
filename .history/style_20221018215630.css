@@ -257,7 +257,6 @@ body {
     display: none;
   }
   .mobile-nav-toggle {
-    display: block;
     background-color: transparent;
     border: none;
     cursor: pointer;
