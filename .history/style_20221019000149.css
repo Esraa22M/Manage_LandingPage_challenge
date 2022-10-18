@@ -258,9 +258,8 @@ body {
   .primary-navigation {
     display: none;
     position: absolute;
-    z-index: 10;
     inset: 7rem var(--size-400) auto;
-    background-color: white;
+    background-color: var(--clr-neutral-100);
     border-radius: var(--size-100);
   }
   .nav-list {
@@ -273,29 +272,12 @@ body {
   }
   .nav-list a {
     text-decoration: none;
-    color: var(--clr-primary-400);
-  }
-  .nav-list a:hover,
-  .nav-list a:focus {
-    color: var(--clr-accent-400);
+    color: white;
   }
   .primary-navigation[data-visible] {
     display: block;
   }
-  .primary-header[data-overlay]::after {
-    content: "";
-    z-index: 5;
-
-    position: fixed;
-    /* height: 100%; */
-    inset: 0;
-    background-image: linear-gradient(rgb(0 0 0/0), rgb(0 0 0/0.8));
-  }
   .mobile-nav-toggle {
-    position: absolute;
-    z-index: 16;
-    top: var(--size-500);
-    right: var(--size-400);
     display: block;
     background-color: transparent;
     border: none;

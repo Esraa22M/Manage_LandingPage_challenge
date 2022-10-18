@@ -258,7 +258,6 @@ body {
   .primary-navigation {
     display: none;
     position: absolute;
-    z-index: 10;
     inset: 7rem var(--size-400) auto;
     background-color: white;
     border-radius: var(--size-100);
@@ -282,20 +281,14 @@ body {
   .primary-navigation[data-visible] {
     display: block;
   }
-  .primary-header[data-overlay]::after {
+  .primary-navigation[data-overlay]::after {
     content: "";
-    z-index: 5;
-
-    position: fixed;
-    /* height: 100%; */
+    display: block;
+    position: absolute;
+    background-color: aqua;
     inset: 0;
-    background-image: linear-gradient(rgb(0 0 0/0), rgb(0 0 0/0.8));
   }
   .mobile-nav-toggle {
-    position: absolute;
-    z-index: 16;
-    top: var(--size-500);
-    right: var(--size-400);
     display: block;
     background-color: transparent;
     border: none;
