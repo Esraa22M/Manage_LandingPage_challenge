@@ -255,7 +255,6 @@ body {
   display: flex;
   list-style: none;
   gap: clamp(var(--size-500), 5vw, var(--size-700));
-  font-weight: var(--fw-semibold);
 }
 .nav-list a {
   text-decoration: none;
@@ -272,8 +271,6 @@ body {
     position: absolute;
     z-index: 10;
     inset: 7rem var(--size-400) auto;
-    max-width: 45rem;
-    margin-inline: auto;
     background-color: white;
     border-radius: var(--size-100);
   }

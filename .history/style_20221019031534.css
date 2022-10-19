@@ -272,8 +272,7 @@ body {
     position: absolute;
     z-index: 10;
     inset: 7rem var(--size-400) auto;
-    max-width: 45rem;
-    margin-inline: auto;
+    max-width: 35rem;
     background-color: white;
     border-radius: var(--size-100);
   }
