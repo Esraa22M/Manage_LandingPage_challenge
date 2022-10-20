@@ -271,9 +271,6 @@ p:not([class]) {
   opacity: 0.7;
   max-width: 32ch;
 }
-p[data-width="wide"] {
-  max-width: 45ch;
-}
 /*for mobile*/
 @media (max-width: 50em) {
   .primary-navigation {

@@ -266,13 +266,9 @@ body {
 .nav-list a:focus {
   color: var(--clr-accent-400);
 }
-/*select all p except p that has class*/
-p:not([class]) {
+p {
   opacity: 0.7;
-  max-width: 32ch;
-}
-p[data-width="wide"] {
-  max-width: 45ch;
+  max-width: 35ch;
 }
 /*for mobile*/
 @media (max-width: 50em) {

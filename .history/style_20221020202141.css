@@ -261,18 +261,9 @@ body {
   text-decoration: none;
   color: var(--clr-primary-400);
 }
-
 .nav-list a:hover,
 .nav-list a:focus {
   color: var(--clr-accent-400);
-}
-/*select all p except p that has class*/
-p:not([class]) {
-  opacity: 0.7;
-  max-width: 32ch;
-}
-p[data-width="wide"] {
-  max-width: 45ch;
 }
 /*for mobile*/
 @media (max-width: 50em) {
@@ -328,21 +319,16 @@ p[data-width="wide"] {
 
 /* this css rule is better than .flow :not(:first-child) 
  because the second rule is hard to be overriden */
-/* equivalent to :where(.flow:not(:first-child)) it will have zero specifity */
-:where(.flow :not(:first-child)) {
-  margin-top: var(--flow-spacer, 2.7em);
+.flow:not(:first-child)  /* equivalent to :where(.flow:not(:first-child)) it will have zero specifity */ {
+  outline: 3px solid lime;
 }
-
+.button {
+  outline: 3px solid rgb(110, 44, 44);
+}
 /*for desktop screen size*/
 @media (min-width: 50em) {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-  }
-  .nav-list a:hover::after {
-    content: "";
-    display: block;
-    height: 3px;
-    background: var(--clr-accent-400);
   }
 }

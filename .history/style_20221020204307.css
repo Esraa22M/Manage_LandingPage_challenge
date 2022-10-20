@@ -261,18 +261,17 @@ body {
   text-decoration: none;
   color: var(--clr-primary-400);
 }
-
+.nav-list a:hover::after {
+  content: "";
+  display: block;
+  width: fit-content;
+  height: 3px;
+  margin-top: 0.5em;
+  background: var(--clr-accent-400);
+}
 .nav-list a:hover,
 .nav-list a:focus {
   color: var(--clr-accent-400);
-}
-/*select all p except p that has class*/
-p:not([class]) {
-  opacity: 0.7;
-  max-width: 32ch;
-}
-p[data-width="wide"] {
-  max-width: 45ch;
 }
 /*for mobile*/
 @media (max-width: 50em) {
@@ -338,11 +337,5 @@ p[data-width="wide"] {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-  }
-  .nav-list a:hover::after {
-    content: "";
-    display: block;
-    height: 3px;
-    background: var(--clr-accent-400);
   }
 }

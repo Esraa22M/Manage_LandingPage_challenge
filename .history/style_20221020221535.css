@@ -272,7 +272,7 @@ p:not([class]) {
   max-width: 32ch;
 }
 p[data-width="wide"] {
-  max-width: 45ch;
+  max-width: 42ch;
 }
 /*for mobile*/
 @media (max-width: 50em) {

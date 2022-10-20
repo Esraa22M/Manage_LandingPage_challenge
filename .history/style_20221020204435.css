@@ -266,14 +266,6 @@ body {
 .nav-list a:focus {
   color: var(--clr-accent-400);
 }
-/*select all p except p that has class*/
-p:not([class]) {
-  opacity: 0.7;
-  max-width: 32ch;
-}
-p[data-width="wide"] {
-  max-width: 45ch;
-}
 /*for mobile*/
 @media (max-width: 50em) {
   .primary-navigation {
@@ -343,6 +335,7 @@ p[data-width="wide"] {
     content: "";
     display: block;
     height: 3px;
+    margin-top: 0.5em;
     background: var(--clr-accent-400);
   }
 }
