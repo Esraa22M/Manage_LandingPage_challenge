@@ -308,39 +308,8 @@ p[data-width="wide"] {
   margin-top: var(--flow-spacer, 2.7em);
 }
 
-/*for desktop screen size*/
-@media (min-width: 60em) {
-  .even-columns {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-  p[data-width="very-wide"] {
-    max-width: 14em;
-    width: 14em;
-    min-width: fit-content;
-    text-align: left;
-  }
-  .nav-list a {
-    transition: all ease-in-out 0.5s;
-  }
-  .nav-list a::after {
-    content: "";
-    display: block;
-    height: 3px;
-    background: var(--clr-accent-400);
-    opacity: 0;
-    transition: all ease-out 0.5s;
-  }
-
-  .nav-list a:hover::after {
-    opacity: 1;
-  }
-  .justify-self-end-md {
-    justify-self: end;
-  }
-}
 /*for mobile*/
-@media (max-width: 60em) {
+@media (max-width: 50em) {
   .primary-navigation {
     display: none;
     position: absolute;
@@ -398,5 +367,35 @@ p[data-width="wide"] {
   }
   .hidden {
     display: none;
+  }
+}
+
+/*for desktop screen size*/
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+  p[data-width="very-wide"] {
+    width: 20em;
+    background-color: aqua;
+  }
+  .nav-list a {
+    transition: all ease-in-out 0.5s;
+  }
+  .nav-list a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: var(--clr-accent-400);
+    opacity: 0;
+    transition: all ease-out 0.5s;
+  }
+
+  .nav-list a:hover::after {
+    opacity: 1;
+  }
+  .justify-self-end-md {
+    justify-self: end;
   }
 }

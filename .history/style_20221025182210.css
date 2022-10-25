@@ -250,9 +250,6 @@ body {
 .mobile-nav-toggle {
   display: none;
 }
-.flex {
-  display: flex;
-}
 .nav-list {
   font-size: var(--fs-nav);
   display: flex;
@@ -277,70 +274,8 @@ p:not([class]) {
 p[data-width="wide"] {
   max-width: 45ch;
 }
-.align-items-center {
-  align-items: center;
-}
-.cta {
-  text-align: center;
-}
-
-.cta {
-  position: relative;
-  /* creating stacking context */
-  isolation: isolate;
-}
-.cta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: url("images/bg-tablet-pattern.svg"),
-    url("images/bg-tablet-pattern.svg");
-  background-repeat: no-repeat;
-  background-position: -15rem -5rem, 45rem -10rem;
-  opacity: 0.1;
-}
-
-/* this css rule is better than .flow :not(:first-child) 
- because the second rule is hard to be overriden */
-/* equivalent to :where(.flow:not(:first-child)) it will have zero specifity */
-:where(.flow :not(:first-child)) {
-  margin-top: var(--flow-spacer, 2.7em);
-}
-
-/*for desktop screen size*/
-@media (min-width: 60em) {
-  .even-columns {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-  p[data-width="very-wide"] {
-    max-width: 14em;
-    width: 14em;
-    min-width: fit-content;
-    text-align: left;
-  }
-  .nav-list a {
-    transition: all ease-in-out 0.5s;
-  }
-  .nav-list a::after {
-    content: "";
-    display: block;
-    height: 3px;
-    background: var(--clr-accent-400);
-    opacity: 0;
-    transition: all ease-out 0.5s;
-  }
-
-  .nav-list a:hover::after {
-    opacity: 1;
-  }
-  .justify-self-end-md {
-    justify-self: end;
-  }
-}
 /*for mobile*/
-@media (max-width: 60em) {
+@media (max-width: 50em) {
   .primary-navigation {
     display: none;
     position: absolute;
@@ -350,18 +285,6 @@ p[data-width="wide"] {
     margin-inline: auto;
     background-color: white;
     border-radius: var(--size-100);
-  }
-  .align-items-center-sm {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  :where(.align-items-center-sm:first-child) {
-    text-align: center;
-  }
-  .cta {
-    text-align: left;
   }
   .nav-list {
     display: grid;
@@ -378,7 +301,9 @@ p[data-width="wide"] {
   .primary-header[data-overlay]::after {
     content: "";
     z-index: 5;
+
     position: fixed;
+    /* height: 100%; */
     inset: 0;
     background-image: linear-gradient(rgb(0 0 0/0), rgb(0 0 0/0.8));
   }
@@ -398,5 +323,49 @@ p[data-width="wide"] {
   }
   .hidden {
     display: none;
+  }
+}
+.align-items-center {
+  align-items: center;
+}
+/* this css rule is better than .flow :not(:first-child) 
+ because the second rule is hard to be overriden */
+/* equivalent to :where(.flow:not(:first-child)) it will have zero specifity */
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 2.7em);
+}
+
+/*for desktop screen size*/
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+  .nav-list a {
+    transition: all 2ms;
+  }
+
+  .nav-list a:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: var(--clr-accent-400);
+  }
+  .justify-self-end {
+    justify-self: end;
+  }
+
+  .cta {
+    position: relative;
+    /* creating stacking context */
+    isolation: isolate;
+  }
+  .cta::before {
+    content: "esraa";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("images/bg-tablet-pattern.svg");
+    opacity: 0.2;
   }
 }

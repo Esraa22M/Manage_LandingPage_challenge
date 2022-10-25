@@ -307,9 +307,11 @@ p[data-width="wide"] {
 :where(.flow :not(:first-child)) {
   margin-top: var(--flow-spacer, 2.7em);
 }
-
+p[data-width="very-wide"] {
+  width: unset;
+}
 /*for desktop screen size*/
-@media (min-width: 60em) {
+@media (min-width: 50em) {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -340,7 +342,7 @@ p[data-width="wide"] {
   }
 }
 /*for mobile*/
-@media (max-width: 60em) {
+@media (max-width: 45em) {
   .primary-navigation {
     display: none;
     position: absolute;

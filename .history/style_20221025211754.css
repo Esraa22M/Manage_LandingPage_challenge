@@ -309,15 +309,13 @@ p[data-width="wide"] {
 }
 
 /*for desktop screen size*/
-@media (min-width: 60em) {
+@media (min-width: 50em) {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
   p[data-width="very-wide"] {
-    max-width: 14em;
     width: 14em;
-    min-width: fit-content;
     text-align: left;
   }
   .nav-list a {
@@ -340,7 +338,7 @@ p[data-width="wide"] {
   }
 }
 /*for mobile*/
-@media (max-width: 60em) {
+@media (max-width: 45em) {
   .primary-navigation {
     display: none;
     position: absolute;
